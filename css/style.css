@@ -10,7 +10,7 @@ body{
 }
 
 /* Header */
-.header{
+header{
     padding-top:30px;
 }
 
@@ -31,9 +31,9 @@ h2{
 }
 
 /* Main */
-.main{
-    width: 60%;
-    margin-left: 20%;
+main{
+    width: 80%;
+    margin-left: 10%;
 }
 
 h3{
@@ -91,11 +91,38 @@ button{
     text-align: center;
 }
 
+.artists {
+    margin-bottom: 40px;
+}
+
+li {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #bfbfbf;
+    margin-bottom: 5px;
+}
+
+#top1{
+    color: goldenrod;
+    font-size: 1.75em;
+}
+
+#top2{
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#top3{
+    color: #916531;
+    font-size: 1.25em;
+}
+
 .questions p{
-    width: 40%;
+    width: 80%;
     text-align: center;
     color: #bfbfbf;
-    margin: 0px 30% 15px 30%;
+    margin: 0px 10% 15px 10%;
 }
 
 #score {
