@@ -20,7 +20,33 @@ function gameStart() {
   alert(
     "Welcome to my game of seven questions! Please answer with either a 'Yes' or a 'No' for each question."
   );
+let questions=["Am I old enough to vote?", "Have I completed a college degree?", "Was I studying Underwater Basket Weaving in college?", "Was my favorite job that I've worked at a place to play video games?", "Am I currently learning new things with Code Fellows?"];
 
+let answers=[['yes', 'y'], ['no', 'n'], ['no', 'n'], ['yes', 'y'], ['yes', 'y']];
+
+for(let i=0; i<questions.length; i++){
+  let input=prompt(questions[i]);
+  let correct=false;
+  if(typeof answers[i] !=='string'){
+    for(let answer of answers[i]){
+      if(input.toLowerCase() === answer){
+        alert('You are correct!');
+        score++;
+        correct=true;
+        let qID = `q${i + 1}`;
+        document.getElementById(qID).innerHTML = `Question ${i + 1}: You answered '${input}', correct!`;
+        break;
+      }
+    }
+  }
+  if(correct===false){
+    alert(`Sorry, that's not correct`);
+    let qID = `q${i + 1}`;
+        document.getElementById(qID).innerHTML = `Question ${i + 1}: You answered '${input}', not correct!`;
+  }
+}
+
+  /*
   // Question 1
   let ques1 = prompt("Am I old enough to vote?");
   if (ques1.toLowerCase() === "yes" || ques1.toLowerCase() === "y") {
@@ -136,7 +162,7 @@ function gameStart() {
     document.getElementById(
       "q5"
     ).innerHTML = `Question 5: You answered '${ques5}', which isn't even a real answer??`;
-  }
+  }*/
 
   alert("Okay, we're no longer answering with 'Yes' or 'No' here.");
 
